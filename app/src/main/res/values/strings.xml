@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">AbhiandroidRecyclerViewExampleGridLayoutManager</string>
+    <string name="app_name">AbhiandroidRecyclerViewExampleStaggedGridLayoutManager</string>
     <string name="abcd">ABCD</string>
 </resources>

@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -36,7 +35,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(MyViewHolder holder, final int position) {
         // set the data in items
         holder.name.setText(personNames.get(position));
         holder.image.setImageResource(personImages.get(position));
@@ -50,14 +49,16 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                 context.startActivity(intent); // start Intent
             }
         });
+
     }
+
 
     @Override
     public int getItemCount() {
         return personNames.size();
     }
 
-    public static class MyViewHolder extends RecyclerView.ViewHolder {
+    public class MyViewHolder extends RecyclerView.ViewHolder {
         // init the item view's
         TextView name;
         ImageView image;
